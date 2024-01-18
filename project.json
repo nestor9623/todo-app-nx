@@ -41,11 +41,10 @@
           "optimization": false,
           "vendorChunk": true,
           "extractLicenses": false,
-          "sourceMap": true,
           "namedChunks": true
         }
       },
-      "defaultConfiguration": "production"
+      "defaultConfiguration": "development"
     },
     "serve": {
       "executor": "@angular-devkit/build-angular:dev-server",
@@ -76,7 +75,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectName}"],
       "options": {
-        "jestConfig": "jest.config.ts"
+        "jestConfig": "jest.config.app.ts"
       }
     },
     "serve-static": {
@@ -101,7 +100,6 @@
         "development": {
           "buildOptimizer": false,
           "optimization": false,
-          "sourceMap": true,
           "extractLicenses": false,
           "vendorChunk": true
         }

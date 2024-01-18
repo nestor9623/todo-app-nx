@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    /* ### Primary */
+    --azul: hsl(220, 98%, 61%);
+    --check-inicio: hsl(192, 100%, 67%);
+    --check-final: hsl(280, 87%, 65%);
+
+    /* default */
+    --backgroundend: hsl(225, 12%, 94%);
+    --background: hsl(0, 0%, 989%);
+    --labels: hsl(235, 19%, 35%);
+    --labelstitle: hsl(0, 0%, 98%);
+    --textcompleted: hsl(240, 2%, 84%);
+    --linecolor: hsl(234, 39%, 85%);
+    --shadow: hsl(209, 23%, 22%);
+}
+
+body {
+    font-family: monospace;
+    font-size: 18px;
+    background: gray;
+}

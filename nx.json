@@ -5,12 +5,12 @@
   },
   "targetDefaults": {
     "build": {
-      "cache": true,
+      "cache": false,
       "dependsOn": ["^build"],
       "inputs": ["production", "^production"]
     },
     "lint": {
-      "cache": true,
+      "cache": false,
       "inputs": [
         "default",
         "{workspaceRoot}/.eslintrc.json",
@@ -19,7 +19,7 @@
       ]
     },
     "@nx/jest:jest": {
-      "cache": true,
+      "cache": false,
       "inputs": ["default", "^production", "{workspaceRoot}/jest.preset.js"],
       "options": {
         "passWithNoTests": true
@@ -32,11 +32,11 @@
       }
     },
     "e2e": {
-      "cache": true,
+      "cache": false,
       "inputs": ["default", "^production"]
     },
     "server": {
-      "cache": true
+      "cache": false
     }
   },
   "namedInputs": {

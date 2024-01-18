@@ -1,0 +1,12 @@
+<div class="container_principal">
+    <div class="check {{ todo.completed ? 'checked' : '' }}" (click)="itemCheck()">
+    </div>
+    @if(!this.todo.completed){
+        <input #inputTask class="inputTodo" type="text" [value]="todo.task" (focusout)="focusOut(todo)">
+    } @else {
+        <span class="readonly {{todo.completed ? 'completed' : ''}}">{{ todo.task }}</span>
+    }
+    <span class="icon material-symbols-outlined" (click)="removeTodo(todo.uid)">
+        close
+    </span>
+</div>

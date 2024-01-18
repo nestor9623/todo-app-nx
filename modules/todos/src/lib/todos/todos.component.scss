@@ -1,0 +1,13 @@
+.container {
+  position: relative;
+  align-items: center;
+  height: 100%;
+
+  .content {
+    margin: 5rem auto;
+    align-items: center;
+    .list{
+        width: 100%;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+<div class="container_principal w-100 d-flex mb-2">
+    <div class="container w-100 mb-2">
+        <h1 class="w-100">Prueba BI Todos</h1>
+        <form [formGroup]="form" class="form d-flex align-items-center w-100">
+            <span class="material-symbols-outlined circle mt-3">
+                circle
+            </span>
+            <div class="form-group w-100">
+                <label>Nombre de la tarea</label>
+                <input #inputTask type="text" formControlName="textToSearch" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f['textToSearch'].errors }"
+                    (keydown.enter)="addItemTodo(form)" />
+                @if (submitted && f['textToSearch'].errors) {
+                <div class="invalid-feedback">
+                    @if (f['textToSearch'].errors['required']) {
+                    <div>textToSearch is required</div>
+                    }
+                </div>
+                }
+            </div>
+            <span class="material-symbols-outlined add mt-3" (click)="addItemTodo(form)">
+                add
+            </span>
+        </form>
+    </div>
+
+    <div class="table_content w-100">
+        @if (this.todos.length>0) {
+        <div class="footer-list d-flex justify-content-between mb-2">
+            <span> {{filteredTodos.length}} Registros en total ({{todosLeft()}}) pendientes</span>
+            <div class="filter d-flex">
+                <a class="{{ selAll ? 'active' : '' }}" (click)="viewAll($event)">Todos</a>
+                <a class="{{ selActive ? 'active' : '' }}" (click)="viewActive($event)">Pendientes</a>
+                <a class="{{ selCompleted ? 'active' : '' }}" (click)="viewCompleted($event)">Completos</a>
+            </div>
+            <a (click)="clearCompleted($event)">Eliminar los completos</a>
+        </div>
+        }
+        @for (todo of filteredTodos; track $index) {
+        <prueba-bi-todo-item [todo]="todo" (outputTodoUpdate)="onUpdateTodo($event)"
+            (outputCheckTodo)="onCheckTodo(todo)" (outputRemoveTodo)="onRemoveTodo(todo.uid)"> </prueba-bi-todo-item>
+        }
+    </div>

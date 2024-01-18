@@ -1,0 +1,60 @@
+.container_principal {
+  flex-flow: wrap;
+  .container {
+    background-color: white;
+    border-radius: 5px;
+    .form {
+      .circle {
+        color: lightgray;
+      }
+      .add {
+        color: blue;
+        font-size: 1.2em;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.table_content {
+  border-radius: 5px;
+  overflow: hidden;
+  .footer-list {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.8em;
+    background-color: white;
+    border-radius: 5px;
+    a {
+      text-decoration: none;
+      color: red;
+      &:hover {
+        color: blue;
+        cursor: pointer;
+      }
+      &:active {
+        color: blue;
+      }
+    }
+
+    span {
+      color: red;
+    }
+
+    .filter {
+      gap: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .table_content {
+    .footer-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
+}
