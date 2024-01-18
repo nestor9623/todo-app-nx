@@ -38,9 +38,6 @@ No se injecto ningún servicio puesto que el almacenamiento se utiliza con sessi
 Lodash... al hacer un build tengo una dependencia con lodash.
 
 ## Consideraciones
-
-Es bueno ser sincero , realmente en el codigo sin tener en cuenta las pruebas e2e con cypress , me lleve las 3 horas o quizas 3 horas y media. Sumaria 1 hora más investigando el como implementar pruebas con cypress al igual por un error que me surgio.
-
 ERROR TS5053: Option 'sourceMap' cannot be specified with option 'inlineSourceMap'.... Al final me toco cambiar la configuración en el tsconfig.base.json
 
 Ante nada muchas gracias por la oportunidad.
