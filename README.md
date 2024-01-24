@@ -13,10 +13,10 @@ Se han generado diferentes sintaxis con NX, modulos , test mediante el GUI de ne
 Para ejecutar las tareas se deben ejecutar:
 
 Este comando ejecuta todos los test en consola , sin ventana GUI
-nx run-many --target=test
+npx nx run-many --target=test
 
 Este comando lanza la consola de Cypress y puede verse desde el navegador de Cypress(Configurado en el package.json)
-nom run e2e
+npm run e2e
 
 Para iniciar el proyecto con todos los modulos:
 npx nx run prueba-bi:start
