@@ -1,5 +1,9 @@
 # PruebaBi
     Prueba de codigo para la empresa "BI" en la cual se crea una app SPA , standalone nx workspaces y angular 17 en los cuales hay test muy basicos con jest y test e2e con cypress.
+## Look a demo
+https://prueba-bi.vercel.app/dashboard
+
+
 ## Start the app
 
 La aplicación se ejecuta con el comando npx nx run prueba-bi:start. Luego hay que poner en el navegador http://localhost:4200/ y echale un vistazo.
