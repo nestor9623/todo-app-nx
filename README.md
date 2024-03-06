@@ -1,5 +1,3 @@
-# PruebaBi
-    Prueba de codigo para la empresa "BI" en la cual se crea una app SPA , standalone nx workspaces y angular 17 en los cuales hay test muy basicos con jest y test e2e con cypress.
 ## Look a demo
 https://prueba-bi.vercel.app/dashboard
 
